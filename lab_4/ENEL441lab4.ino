@@ -160,11 +160,14 @@ void loop() {
 
       // proportional control
       // enter your code here
+      epsilon = ref_cal_int - cartPosition[ii];
+      u[ii] = Kp*epsilon;
 
 
       // derivative control
       // enter your code here
-      
+      // epsilon = ref_cal_int - cartPosition[ii];
+      // u[ii] = Kp*epsilon + Kd*(epsilon - epsilon_prev);
 
       // DON'T CHANGE THE CODE BEYOND THIS POINT.
       // the input must be a number between -255 and 255 (8 bit number). 
